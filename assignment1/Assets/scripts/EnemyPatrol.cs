@@ -33,12 +33,12 @@ public class EnemyPatrol : MonoBehaviour {
 		//Vector3 means the x, y, and z axis
 		//Vector2 is the x and y axis
 		if (MoveRight){
-			transform.localScale = new Vector3(-0.2f, 0.2f, 1f);
+			transform.localScale = new Vector3(-7.7414f, 16.89925f, 1f);
 			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 		}
 
 		else {
-			transform.localScale = new Vector3(-0.2f, 0.2f, 1f);
+			transform.localScale = new Vector3(7.7414f, 16.89925f, 1f);
 			GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 		}
 	}

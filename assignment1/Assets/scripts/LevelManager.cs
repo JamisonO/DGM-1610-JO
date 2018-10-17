@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+
 
 public class LevelManager : MonoBehaviour {
 
@@ -33,13 +35,13 @@ public class LevelManager : MonoBehaviour {
 		//Generate Death Particle
 		Instantiate (DeathParticle, Player.transform.position, Player.transform.rotation);
 		//Hide Player
-		Player.isKinematic = false;
+		//Player.isKinematic = false;
 		Player.GetComponent<Renderer> ().enabled = false;
 		//Gravity Reset
 		GravityStore = Player.GetComponent<Rigidbody2D>().gravityScale;
 		Player.GetComponent<Rigidbody2D>().gravityScale = 0f;
 		Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-		// Point Penalty
+		//Point Penalty
 		ScoreManager.AddPoints(-PointPenaltyOnDeath);
 		//Debug Message
 		Debug.Log ("Player Respawn");
@@ -50,9 +52,9 @@ public class LevelManager : MonoBehaviour {
 		//Match Players transform position
 		Player.transform.position = CurrentCheckPoint.transform.position;
 		//show player
-		Player.isKinematic = true;
+		//Player.isKinematic = true;
 		Player.GetComponent<Renderer> ().enabled = true;
 		//Spawn Particle
-		Instantiate (RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint);
+		Instantiate (RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
 	}
 }

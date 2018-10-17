@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class KILL : MonoBehaviour {
 
-
 	public LevelManager LevelManager;
 
 	// Use this for initialization
@@ -12,7 +11,7 @@ public class KILL : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
-		if(other.name == "PC"){
+		if(other.name == "character"){
 			LevelManager.RespawnPlayer();
 		}
 	}
