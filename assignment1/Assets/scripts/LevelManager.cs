@@ -32,28 +32,31 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	public IEnumerator RespawnPlayerCo(){
-		//Generate Death Particle
-		Instantiate (DeathParticle, Player.transform.position, Player.transform.rotation);
 		//Hide Player
 		//Player.isKinematic = false;
+		if(Player != null)
+		{
 		Player.GetComponent<Renderer> ().enabled = false;
+		}
+		//Generate Death Particle
+		Instantiate (DeathParticle, Player.transform.position, Player.transform.rotation);
+		//Point Penalty
+		ScoreManager.AddPoints(-PointPenaltyOnDeath);
+		//Match Players transform position
+		Player.transform.position = CurrentCheckPoint.transform.position;
+		//Show player
+		//Player.isKinematic = true;
+		Player.GetComponent<Renderer> ().enabled = true;
 		//Gravity Reset
 		GravityStore = Player.GetComponent<Rigidbody2D>().gravityScale;
 		Player.GetComponent<Rigidbody2D>().gravityScale = 0f;
 		Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-		//Point Penalty
-		ScoreManager.AddPoints(-PointPenaltyOnDeath);
+		//Gravity restore
+		Player.GetComponent<Rigidbody2D>().gravityScale = GravityStore;
 		//Debug Message
 		Debug.Log ("Player Respawn");
 		//Respawn Delay
 		yield return new WaitForSeconds (RespawnDelay);
-		//Gravity restore
-		Player.GetComponent<Rigidbody2D>().gravityScale = GravityStore;
-		//Match Players transform position
-		Player.transform.position = CurrentCheckPoint.transform.position;
-		//show player
-		//Player.isKinematic = true;
-		Player.GetComponent<Renderer> ().enabled = true;
 		//Spawn Particle
 		Instantiate (RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
 	}

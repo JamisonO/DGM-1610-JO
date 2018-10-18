@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class KILL : MonoBehaviour {
@@ -11,7 +13,7 @@ public class KILL : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
-		if(other.name == "character"){
+		if(other.name == "Player"){
 			LevelManager.RespawnPlayer();
 		}
 	}
