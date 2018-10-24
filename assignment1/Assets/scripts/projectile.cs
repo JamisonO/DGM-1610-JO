@@ -1,11 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class projectile : MonoBehaviour {
 
 	public float Speed;
-	public Rigidbody2D PC;
+	public Rigidbody2D Player;
 
 	public GameObject EnemyDeath;
 
@@ -16,13 +15,13 @@ public class projectile : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		if(PC.transform.localScale.x < 0)
+		if(Player.transform.localScale.x < 0)
 			Speed = -Speed;	
 
 	}
 
 	void Update () {
-		GetComponent<Rigidbody2D>().velocity = new Vector2(Speed, GetComponent<Rigidbody2D>().velocity)
+		GetComponent<Rigidbody2D>().velocity = new Vector2(Speed, GetComponent<Rigidbody2D>().velocity.y);
 	}
 
 	void OnTriggerEnter2D(Collider2D other){

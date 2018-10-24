@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class shootfunct : MonoBehaviour {
@@ -14,7 +13,7 @@ public class shootfunct : MonoBehaviour {
 
 	//Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.RightControl))
+		if(Input.GetKeyDown(KeyCode.Mouse0))
 			Instantiate(Projectile,FirePoint.position, FirePoint.rotation);
 	}
 }
