@@ -21,6 +21,7 @@ using UnityEngine;
          public int PointPenaltyOnDeath;
          //Store Gravity Value
          private float GravityStore;
+
          //Use this for initialization
          void Start()
          {
