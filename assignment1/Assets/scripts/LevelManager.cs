@@ -61,7 +61,7 @@ using UnityEngine;
              //Instantiate particles
              Instantiate(RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
              //Respawn player at the current check point
-             Player.transform.position = new Vector2 (CurrentCheckPoint.transform.position.x, CurrentCheckPoint.transform.position.y);
+             Player.transform.position = new Vector3 (CurrentCheckPoint.transform.position.x, CurrentCheckPoint.transform.position.y, CurrentCheckPoint.transform.position.z);
              Debug.Log("Player Respawned");
          }
      }

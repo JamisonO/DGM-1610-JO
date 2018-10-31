@@ -7,7 +7,7 @@ public class projectile : MonoBehaviour {
 	public float Speed;
 	public Rigidbody2D Player;
 
-	public GameObject EnemyDeath;
+	public GameObject EnemyDeathParticle;
 
 	public GameObject ProjectileParticle;
 
@@ -15,7 +15,7 @@ public class projectile : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		Player = GameObject.Find("Player").GetComponent<Rigidbody2D>();
 		if(Player.transform.localScale.x < 0)
 			Speed = -Speed;	
 
@@ -27,7 +27,7 @@ public class projectile : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.tag == "Enemy"){
-			Instantiate(EnemyDeath, other.transform.position, other.transform.rotation);
+			Instantiate(EnemyDeathParticle, other.transform.position, other.transform.rotation);
 			Destroy (other.gameObject);
 			ScoreManager.AddPoints (PointsForKill);
 		

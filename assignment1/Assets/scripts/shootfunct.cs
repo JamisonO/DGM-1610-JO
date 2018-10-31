@@ -8,7 +8,7 @@ public class shootfunct : MonoBehaviour {
 	public GameObject Projectile;
 
 	void Start(){
-		Projectile = GameObject.Find("Projectile");
+		//Projectile = GameObject.Find("Projectile");
 	}
 
 	//Update is called once per frame
