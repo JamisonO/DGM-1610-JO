@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\homework scripts\Animal.cs" />
+     <Compile Include="Assets\homework scripts\arrays.cs" />
      <Compile Include="Assets\homework scripts\Canine.cs" />
      <Compile Include="Assets\homework scripts\German Shepherd.cs" />
      <Compile Include="Assets\homework scripts\loops.cs" />
