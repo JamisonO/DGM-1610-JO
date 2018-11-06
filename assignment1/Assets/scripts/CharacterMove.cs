@@ -57,6 +57,13 @@ public class CharacterMove : MonoBehaviour {
 			MoveVelocity = -MoveSpeed;
 		}
 
+		//flips the character
+		if (GetComponent<Rigidbody2D>().velocity.x > 0)
+			transform.localScale = new Vector3(0.4962814f,0.4535711f,1f);
+
+		else if (GetComponent<Rigidbody2D>().velocity.x < 0)
+			transform.localScale = new Vector3(-0.4962814f,0.4535711f,1f);
+
 		GetComponent<Rigidbody2D>().velocity = new Vector2( MoveVelocity, GetComponent<Rigidbody2D>().velocity.y);
 
 	}

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/* using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,7 +18,7 @@ public class arrays : MonoBehaviour {
 
 		foreach (string item in Inventory){
 			print("Using" + item);
-	}
+		}
 
 	}
 	
@@ -27,3 +27,4 @@ public class arrays : MonoBehaviour {
 		
 	}
 }
+*/
