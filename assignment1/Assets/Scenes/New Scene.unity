@@ -722,8 +722,14 @@ Prefab:
       objectReference: {fileID: 899218246}
     - target: {fileID: 1908537745187990, guid: 662339820d5714265a22f8c4a42ddf05, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114205410911458334, guid: 662339820d5714265a22f8c4a42ddf05,
+        type: 2}
+      propertyPath: EnemyDeathParticle
+      value: 
+      objectReference: {fileID: 1880854773110588, guid: bd94ad851e272472c9b789c1b163f24a,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 662339820d5714265a22f8c4a42ddf05, type: 2}
   m_IsPrefabAsset: 0
