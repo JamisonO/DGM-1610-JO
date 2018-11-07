@@ -5,10 +5,11 @@ using UnityEngine;
 public class arrays : MonoBehaviour {
 
 	string[] Inventory = new string[5];
-	int [] Ledger = new int[]{25, 62, 3, 79, 1};
-	float [] Floatarray = new float[]{2.3f, 6.9f, 1.8f, 9.3f};
-	double [] Doublearray = new double[]{7.6d, 3.7d, 2.1d, 8.4d};
-	bool [] Switchstate = new bool[]{false, true, false, false, true};
+	/* int [] Ledger = {25, 62, 3, 79, 1};
+	float [] Floatarray = {2.3f, 6.9f, 1.8f, 9.3f};
+	double [] Doublearray = {7.6d, 3.7d, 2.1d, 8.4d};
+	bool [] Switchstate = {false, true, false, false, true};
+	string[] Pets = {"Cat", "Dog", "Bird", "Turtle", "Rock"};*/
 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +24,22 @@ public class arrays : MonoBehaviour {
 			print("Using" + item);
 		}
 
+		/* foreach (int item in Ledger){
 
+		}
+
+		foreach (float item in Floatarray){
+
+		}
+
+		foreach (double item in Doublearray){
+
+		}
+
+		foreach (bool item in Switchstate){
+
+		}
+		*/
 	}
 
 	

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class loops : MonoBehaviour {
-
+/*
 int x = 0;
 int y = 0;
 int z = 41;
@@ -45,6 +45,6 @@ int z = 41;
 		void Update () {
 			
 		}
-
+	*/
 	
 }
