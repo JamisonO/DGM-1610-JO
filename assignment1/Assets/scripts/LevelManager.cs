@@ -8,6 +8,7 @@ using UnityEngine;
      {
      
          public GameObject CurrentCheckPoint;
+         public GameObject Player2;
          public GameObject Player;
          public Rigidbody2D PlayerRb;
          public Renderer playersRender;
@@ -40,10 +41,11 @@ using UnityEngine;
              //Player.isKinematic = false;
              playersRender.enabled = false;
      
+             Player2.SetActive = false;
              //Generate Death Particle
              Instantiate(DeathParticle, Player.transform.position, Player.transform.rotation);
              //Point Penalty
-           //  ScoreManager.AddPoints(-PointPenaltyOnDeath);
+             //  ScoreManager.AddPoints(-PointPenaltyOnDeath);
              //Show player
              //Player.isKinematic = true;
             
@@ -56,6 +58,9 @@ using UnityEngine;
              yield return new WaitForSeconds(RespawnDelay);
              //Gravity restore   
              PlayerRb.gravityScale = GravityStore;
+
+             Player2.SetActive = true;
+
              //Enable players render
              playersRender.enabled = true;
              //Instantiate particles
