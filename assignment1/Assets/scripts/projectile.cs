@@ -16,6 +16,8 @@ public class projectile : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Player = GameObject.Find("Player").GetComponent<Rigidbody2D>();
+		EnemyDeathParticle = Resources.Load("Prefab/DeathParticle") as GameObject;
+		ProjectileParticle = Resources.Load("Prefab/projectile particle") as GameObject;
 		if(Player.transform.localScale.x < 0)
 			Speed = -Speed;	
 
