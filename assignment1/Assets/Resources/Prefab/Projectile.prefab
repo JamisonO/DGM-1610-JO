@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b7202e0e3d24bdf81063edf12e7c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  Speed: 20
   Player: {fileID: 0}
   EnemyDeathParticle: {fileID: 1880854773110588, guid: bd94ad851e272472c9b789c1b163f24a,
     type: 2}
