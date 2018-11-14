@@ -18,6 +18,18 @@ public class EnemyPatrol : MonoBehaviour {
 	private bool NotAtEdge;
 	public Transform EdgeCheck;
 	
+	void OnTriggerEnter2D(Collider2D other){
+			if(other.name == "Player") {
+				if (MoveRight){
+					MoveRight = false;
+				}
+
+				else {
+					MoveRight = true;
+				}
+			}
+		}
+
 	// Update is called once per frame
 	void Update () {
 
