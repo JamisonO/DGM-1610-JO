@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour {
 
-	public int health = 80;
+	public PlayerHealth PlayerHealth;
 
 	// Use this for initialization
 	void Start () {
-		
+		PlayerHealth = FindObjectOfType <PlayerHealth>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		switch (health)
+		switch (PlayerHealth.Health)
 		{
 		case 50:
 			//animation 3
@@ -26,10 +26,6 @@ public class NewBehaviourScript : MonoBehaviour {
 		case 5:
 			//animation 1
 			Debug.Log("Critically Injured");
-			break;
-		default:
-			//
-			Debug.Log("Barely Alive");
 			break;
 		}
 	}

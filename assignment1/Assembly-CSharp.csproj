@@ -61,10 +61,11 @@
      <Compile Include="Assets\scripts\CharacterMove.cs" />
      <Compile Include="Assets\scripts\CoinPickup.cs" />
      <Compile Include="Assets\scripts\conditionals.cs" />
+     <Compile Include="Assets\scripts\EnemyDamage.cs" />
      <Compile Include="Assets\scripts\EnemyPatrol.cs" />
      <Compile Include="Assets\scripts\HealthAnimate.cs" />
-     <Compile Include="Assets\scripts\KILL.cs" />
      <Compile Include="Assets\scripts\LevelManager.cs" />
+     <Compile Include="Assets\scripts\PlayerHealth.cs" />
      <Compile Include="Assets\scripts\projectile.cs" />
      <Compile Include="Assets\scripts\ScoreManager.cs" />
      <Compile Include="Assets\scripts\shootfunct.cs" />

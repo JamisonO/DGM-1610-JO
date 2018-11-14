@@ -13,6 +13,7 @@ using UnityEngine;
          private Rigidbody2D PlayerRb;
          private Collider2D PlayerCollider;
          private Renderer playersRender;
+         public PlayerHealth PlayerHealth;
      
          // Particles
          public GameObject DeathParticle;
@@ -33,6 +34,7 @@ using UnityEngine;
              playersRender = Player.GetComponent<Renderer>();
              PlayerCollider = Player.GetComponent<Collider2D>();
              print(playersRender);
+             PlayerHealth = FindObjectOfType <PlayerHealth>();
          }
      
          public void RespawnPlayer()
@@ -46,8 +48,8 @@ using UnityEngine;
          public IEnumerator RespawnPlayerCo()
          {
              respawnIsRunning = true;
+
              //Hide Player
-             //Player.isKinematic = false;
              playersRender.enabled = false;    
              PlayerCollider.enabled = false;
 
@@ -56,11 +58,6 @@ using UnityEngine;
 
              //Point Penalty
              //ScoreManager.AddPoints(-PointPenaltyOnDeath);
-
-             //Show player
-             //Player.isKinematic = true;
-             
-             //
 
              //Gravity Reset
              GravityStore = PlayerRb.gravityScale;
@@ -75,6 +72,7 @@ using UnityEngine;
              Instantiate(RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
              
              //Respawn player at the current check point
+             PlayerHealth.Health = 100;
              Player.transform.position = new Vector3 (CurrentCheckPoint.transform.position.x, CurrentCheckPoint.transform.position.y, CurrentCheckPoint.transform.position.z);
              playersRender.enabled = true;
              PlayerCollider.enabled = true;
