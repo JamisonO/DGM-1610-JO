@@ -64,6 +64,7 @@
      <Compile Include="Assets\scripts\EnemyDamage.cs" />
      <Compile Include="Assets\scripts\EnemyPatrol.cs" />
      <Compile Include="Assets\scripts\HealthAnimate.cs" />
+     <Compile Include="Assets\scripts\HealthBar.cs" />
      <Compile Include="Assets\scripts\LevelManager.cs" />
      <Compile Include="Assets\scripts\MainMenu.cs" />
      <Compile Include="Assets\scripts\PlayerHealth.cs" />
