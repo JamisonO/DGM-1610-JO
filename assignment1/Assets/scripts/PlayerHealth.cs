@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
 
-	public int Health = 100;
+	public float Health = 100;
 	public LevelManager LevelManager;
 
 	// Use this for initialization

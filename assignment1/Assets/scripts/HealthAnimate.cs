@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour {
-
+/* 
 	public PlayerHealth PlayerHealth;
 
 	// Use this for initialization
@@ -29,4 +29,5 @@ public class NewBehaviourScript : MonoBehaviour {
 			break;
 		}
 	}
+*/
 }
