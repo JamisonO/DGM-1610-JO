@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
 
-	public float Health = 100;
+	public float Health = 100f;
 	public LevelManager LevelManager;
 
 	// Use this for initialization
@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(Health == 0) {
+		if(Health == 0f) {
 			LevelManager.RespawnPlayer();
 		}
 	}
