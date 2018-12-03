@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
 
+	public Slider Bar;
 	public float Health = 100f;
 	public LevelManager LevelManager;
 
@@ -15,6 +16,10 @@ public class PlayerHealth : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		//Updates health bar slider with current health
+		Bar.value = Health;
+
 		if(Health == 0f) {
 			LevelManager.RespawnPlayer();
 		}
