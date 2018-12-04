@@ -24,4 +24,10 @@ public class PlayerHealth : MonoBehaviour {
 			LevelManager.RespawnPlayer();
 		}
 	}
+
+	public void AddHP (float HPtoAdd){
+		
+		Health += HPtoAdd;
+
+	}
 }

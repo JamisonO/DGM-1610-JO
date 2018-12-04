@@ -37,4 +37,11 @@ public class shootfunct : MonoBehaviour {
 			Projectile.SetActive(true);
 		}
 	}
+
+	public void AddAmmo (float AmmotoAdd){
+		
+		Ammo += AmmotoAdd;
+
+	}
+
 }
