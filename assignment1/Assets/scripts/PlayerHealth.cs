@@ -25,6 +25,8 @@ public class PlayerHealth : MonoBehaviour {
 		}
 	}
 
+	//HP addition for HealthPickup
+
 	public void AddHP (float HPtoAdd){
 		
 		Health += HPtoAdd;

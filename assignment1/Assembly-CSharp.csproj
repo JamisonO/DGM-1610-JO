@@ -72,6 +72,7 @@
      <Compile Include="Assets\scripts\projectile.cs" />
      <Compile Include="Assets\scripts\ScoreManager.cs" />
      <Compile Include="Assets\scripts\shootfunct.cs" />
+     <Compile Include="Assets\scripts\SpeedPickup.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>/Users/jamison/Desktop/GIT/DGM-1610-JO/assignment1/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

@@ -38,6 +38,8 @@ public class shootfunct : MonoBehaviour {
 		}
 	}
 
+	//Ammo addition for AmmoPickup
+
 	public void AddAmmo (float AmmotoAdd){
 		
 		Ammo += AmmotoAdd;

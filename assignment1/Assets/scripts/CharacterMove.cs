@@ -70,5 +70,21 @@ public class CharacterMove : MonoBehaviour {
 	public void Jump(){
 		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
 	}
+
+	//couroutine for SpeedPickup
+
+	public void SpeedUp()
+    {
+        StartCoroutine("SpeedUpCo");
+    }
+
+	public IEnumerator SpeedUpCo()
+    {
+		 MoveSpeed = 12;
+		 JumpHeight = 10;
+         yield return new WaitForSeconds(10.0f);
+         MoveSpeed = 5;
+		 JumpHeight = 5;
+	}
 		
 }
