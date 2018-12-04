@@ -63,9 +63,6 @@ using UnityEngine;
              //Generate Death Particle
              Instantiate(DeathParticle, Player.transform.position, Player.transform.rotation);
 
-             //Point Penalty
-             //ScoreManager.AddPoints(-PointPenaltyOnDeath);
-
              //Gravity Reset
              GravityStore = PlayerRb.gravityScale;
              PlayerRb.gravityScale = 0f;
