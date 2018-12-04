@@ -14,7 +14,8 @@ using UnityEngine;
          private Collider2D PlayerCollider;
          private Renderer playersRender;
          public PlayerHealth PlayerHealth;
-     
+         public float Lives = 3;
+         public Slider LivesBar;
          // Particles
          public GameObject DeathParticle;
          public GameObject RespawnParticle;
@@ -36,6 +37,10 @@ using UnityEngine;
              print(playersRender);
              PlayerHealth = FindObjectOfType <PlayerHealth>();
          }
+
+         void Update () {
+             LivesBar.value = Lives;
+         }
      
          public void RespawnPlayer()
          {
@@ -48,6 +53,8 @@ using UnityEngine;
          public IEnumerator RespawnPlayerCo()
          {
              respawnIsRunning = true;
+
+             Lives -= 1;
 
              //Hide Player
              playersRender.enabled = false;    

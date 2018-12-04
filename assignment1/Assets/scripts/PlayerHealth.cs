@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour {
 		//Updates health bar slider with current health
 		Bar.value = Health;
 
-		if(Health == 0f) {
+		if(Health == 0f){
 			LevelManager.RespawnPlayer();
 		}
 	}
