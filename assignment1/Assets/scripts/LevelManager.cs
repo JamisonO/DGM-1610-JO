@@ -83,4 +83,10 @@ using UnityEngine;
              Debug.Log("Player Respawned");
              respawnIsRunning = false;
          }
+
+         public void AddLife (float LifetoAdd){
+		
+		 Lives += LifetoAdd;
+
+	     }
      }

@@ -50,11 +50,19 @@ public class CharacterMove : MonoBehaviour {
 		if(Input.GetKey (KeyCode.D)){
 			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 			MoveVelocity =  MoveSpeed;
+			//animator.SetBool("isWalking", true);
+		}
+		else if(Input.GetKeyUp(KeyCode.D)){
+			//animator.SetBool("isWalking", false);
 		}
 
 		if(Input.GetKey (KeyCode.A)){
 			GetComponent<Rigidbody2D>().velocity = new Vector2( -MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 			MoveVelocity = -MoveSpeed;
+			//animator.SetBool("isWalking", true);
+		}
+		else if(Input.GetKeyUp(KeyCode.A)){
+			//animator.SetBool("isWalking", false);
 		}
 
 		//flips the character
@@ -69,6 +77,7 @@ public class CharacterMove : MonoBehaviour {
 	}
 	public void Jump(){
 		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
+		//animator.SetBool("IsJumping", true);
 	}
 
 	//couroutine for SpeedPickup
