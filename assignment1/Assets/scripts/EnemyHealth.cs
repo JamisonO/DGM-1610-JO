@@ -5,10 +5,12 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour {
 
 	public float Health = 30f;
+	public EnemySpawn EnemySpawn;
 	public GameObject EnemyDeathParticle;
 
 	// Use this for initialization
 	void Start () {
+		EnemySpawn = FindObjectOfType <EnemySpawn>();
         EnemyDeathParticle = Resources.Load("Prefab/DeathParticle") as GameObject;
 	}
 	
@@ -17,6 +19,7 @@ public class EnemyHealth : MonoBehaviour {
 		if(Health == 0f){
 			Instantiate(EnemyDeathParticle, transform.position, transform.rotation);
 			Destroy (gameObject);
+			EnemySpawn.Spawn();
 		}
 	}
 
