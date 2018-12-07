@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class InvincibilityPickup : MonoBehaviour {
 
-	public EnemyDamage EnemyDamage;
+	public PlayerHealth PlayerHealth;
 
 	// Use this for initialization
 	void Start () {
-		EnemyDamage = FindObjectOfType <EnemyDamage>();
+		PlayerHealth = FindObjectOfType <PlayerHealth>();
 	}
 
 	void OnTriggerEnter2D (Collider2D Other){
 		if  (Other.GetComponent<Rigidbody2D> () == null)
 			return;	
 		
-		EnemyDamage.DamageStop();
+		PlayerHealth.DamageStop();
 
 		Destroy (gameObject);
 	}

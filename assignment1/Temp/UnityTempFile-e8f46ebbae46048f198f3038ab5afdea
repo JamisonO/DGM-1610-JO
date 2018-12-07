@@ -199,6 +199,7 @@
 'Assets/scripts/EnemyPatrol.cs'
 'Assets/scripts/HealthAnimate.cs'
 'Assets/scripts/HealthPickup.cs'
+'Assets/scripts/InvincibilityPickup.cs'
 'Assets/scripts/LevelManager.cs'
 'Assets/scripts/LivesPickup.cs'
 'Assets/scripts/MainMenu.cs'

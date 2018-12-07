@@ -24,19 +24,5 @@ public class EnemyDamage : MonoBehaviour {
 
 	}
 
-	// coroutine for invincibility pickup
-
-	public void DamageStop()
-    {
-        StartCoroutine("DamageStopCo");
-    }
-
-	public IEnumerator DamageStopCo()
-    {
-		 Damage = 0;
-         yield return new WaitForSeconds(10.0f);
-		 Damage = 10;
-	}	
-
 }
 

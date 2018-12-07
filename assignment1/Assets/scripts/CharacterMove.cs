@@ -34,6 +34,7 @@ public class CharacterMove : MonoBehaviour {
 
 		//This code makes the character double jump
 
+		 
 		if(Grounded){
 			Doublejump = false;
 		}
@@ -42,6 +43,7 @@ public class CharacterMove : MonoBehaviour {
 			Jump();
 			Doublejump = true;
 		}
+		
 
 		//Non-stick player
 		MoveVelocity = 0f;
@@ -65,15 +67,15 @@ public class CharacterMove : MonoBehaviour {
 			//animator.SetBool("isWalking", false);
 		}
 
+		GetComponent<Rigidbody2D>().velocity = new Vector2( MoveVelocity, GetComponent<Rigidbody2D>().velocity.y);
+
 		//flips the character
 		if (GetComponent<Rigidbody2D>().velocity.x > 0)
 			transform.localScale = new Vector3(0.4962814f,0.4535711f,1f);
 
 		else if (GetComponent<Rigidbody2D>().velocity.x < 0)
 			transform.localScale = new Vector3(-0.4962814f,0.4535711f,1f);
-
-		GetComponent<Rigidbody2D>().velocity = new Vector2( MoveVelocity, GetComponent<Rigidbody2D>().velocity.y);
-
+		
 	}
 	public void Jump(){
 		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
