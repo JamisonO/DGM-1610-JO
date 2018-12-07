@@ -89,13 +89,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b7202e0e3d24bdf81063edf12e7c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 10
+  EnemyHealth: {fileID: 114760972915410764, guid: 52f51a2e89de24466bd64cc81cae11a3,
+    type: 2}
   Speed: 20
   Player: {fileID: 0}
-  EnemyDeathParticle: {fileID: 1880854773110588, guid: bd94ad851e272472c9b789c1b163f24a,
-    type: 2}
   ProjectileParticle: {fileID: 1316258944010862, guid: f9af95a639a984363bb954800ccab453,
     type: 2}
-  PointsForKill: 5
 --- !u!212 &212030521351003740
 SpriteRenderer:
   m_ObjectHideFlags: 1

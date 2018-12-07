@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 50583210207727402}
   - component: {fileID: 114574402790773076}
   - component: {fileID: 114661786810584940}
+  - component: {fileID: 114760972915410764}
   m_Layer: 14
   m_Name: EnemyPatrol
   m_TagString: Enemy
@@ -205,6 +206,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerHealth: {fileID: 0}
   Damage: 10
+--- !u!114 &114760972915410764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1530031009298482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 081bd5948ecde46ddb0fbc15888bac56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 30
+  EnemyDeathParticle: {fileID: 1880854773110588, guid: bd94ad851e272472c9b789c1b163f24a,
+    type: 2}
 --- !u!212 &212864708376379510
 SpriteRenderer:
   m_ObjectHideFlags: 1

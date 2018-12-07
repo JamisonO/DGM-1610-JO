@@ -1331,7 +1331,7 @@ GameObject:
   m_Layer: 15
   m_Name: GroundCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1512,7 +1512,7 @@ GameObject:
   m_Layer: 16
   m_Name: FirePoint
   m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2225,7 +2225,7 @@ MonoBehaviour:
   MoveSpeed: 5
   JumpHeight: 5
   GroundCheck: {fileID: 869521837}
-  GroundCheckRadius: 5
+  GroundCheckRadius: 1
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -2253,7 +2253,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1788986670}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9e286676dd8548d9bfe1f78c033470e, type: 3}
   m_Name: 

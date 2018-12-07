@@ -89,4 +89,6 @@ using UnityEngine;
 		 Lives += LifetoAdd;
 
 	     }
+
+         
      }

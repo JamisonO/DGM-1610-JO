@@ -4,19 +4,16 @@ using UnityEngine;
 
 public class projectile : MonoBehaviour {
 
+	public float Damage;
+	public EnemyHealth EnemyHealth;
 	public float Speed;
 	public Rigidbody2D Player;
-
-	public GameObject EnemyDeathParticle;
-
 	public GameObject ProjectileParticle;
-
-	public int PointsForKill;
 
 	// Use this for initialization
 	void Start () {
+		EnemyHealth = FindObjectOfType <EnemyHealth>();
 		Player = GameObject.Find("Player").GetComponent<Rigidbody2D>();
-		EnemyDeathParticle = Resources.Load("Prefab/DeathParticle") as GameObject;
 		ProjectileParticle = Resources.Load("Prefab/projectile particle") as GameObject;
 		if(Player.transform.localScale.x < 0)
 			Speed = -Speed;	
@@ -29,9 +26,7 @@ public class projectile : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.tag == "Enemy"){
-			Instantiate(EnemyDeathParticle, other.transform.position, other.transform.rotation);
-			Destroy (other.gameObject);
-			ScoreManager.AddPoints (PointsForKill);
+			EnemyHealth.Health -= Damage;
 		}
 
 		Destroy (gameObject);
