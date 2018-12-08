@@ -16,8 +16,7 @@ public class EnemyPatrol : MonoBehaviour {
 	private bool HittingWall;
 
 	// Edge Check
-	private bool NotAtEdge;
-	public Transform EdgeCheck;
+	
 	
 	void OnTriggerEnter2D(Collider2D other){
 			if(other.name == "Player") {
@@ -34,12 +33,10 @@ public class EnemyPatrol : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		NotAtEdge = Physics2D.OverlapCircle(EdgeCheck.position, WallCheckRadius, WhatIsWall);
-
 		HittingWall = Physics2D.OverlapCircle(WallCheck.position, WallCheckRadius, WhatIsWall);
 		
 		// If we've hit a wall or an edge, we turn left
-		if (HittingWall || !NotAtEdge){
+		if (HittingWall){
 			MoveRight = !MoveRight;
 		}
 
