@@ -27,14 +27,15 @@ public class projectile : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.tag == "Enemy"){
 			EnemyHealth.Health -= Damage;
+			Instantiate(ProjectileParticle, other.transform.position, other.transform.rotation);
 		}
-
+	
 		Destroy (gameObject);
 	}
-
-	void OnCollisionEnter2d(Collision2D other){
+	
+	void OnCollisionEnter2D(Collision2D other){
 		Instantiate(ProjectileParticle, transform.position, transform.rotation);
 		Destroy (gameObject);
 	}
-
+	
 }

@@ -12,6 +12,7 @@ public class EnemyPatrol : MonoBehaviour {
 	public Transform WallCheck;
 	public float WallCheckRadius;
 	public LayerMask WhatIsWall;
+	[SerializeField]
 	private bool HittingWall;
 
 	// Edge Check
