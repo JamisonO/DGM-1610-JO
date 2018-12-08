@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50907928976615474}
   - component: {fileID: 61012077768041150}
   - component: {fileID: 114681260099804422}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: LifePU
   m_TagString: Untagged
   m_Icon: {fileID: 0}

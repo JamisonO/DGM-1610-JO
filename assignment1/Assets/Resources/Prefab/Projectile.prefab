@@ -90,8 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 10
-  EnemyHealth: {fileID: 114760972915410764, guid: 52f51a2e89de24466bd64cc81cae11a3,
-    type: 2}
+  EnemyHealth: {fileID: 0}
   Speed: 20
   Player: {fileID: 0}
   ProjectileParticle: {fileID: 1316258944010862, guid: f9af95a639a984363bb954800ccab453,

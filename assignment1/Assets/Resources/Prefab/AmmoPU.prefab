@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50702133778528794}
   - component: {fileID: 58744396687313424}
   - component: {fileID: 114269456720918310}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: AmmoPU
   m_TagString: Untagged
   m_Icon: {fileID: 0}

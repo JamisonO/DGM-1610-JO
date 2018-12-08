@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50036794309320808}
   - component: {fileID: 61120143944382456}
   - component: {fileID: 114393691684108138}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: InvincibilityPU
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 129f9b1354d4e48c2ae4e3b2ad88cb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyDamage: {fileID: 0}
+  PlayerHealth: {fileID: 0}
 --- !u!212 &212028791544098464
 SpriteRenderer:
   m_ObjectHideFlags: 1

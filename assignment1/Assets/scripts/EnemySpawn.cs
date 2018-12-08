@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour {
 
+	
 	public GameObject EnemyPatrol; 
-	public GameObject SpawnPoint;            
+	public GameObject EnemyPatrol2;
+	public GameObject SpawnPoint; 
+
+	GameObject[] EnemyInv = new GameObject[2];         
 
 	// Use this for initialization
 	void Start () {
-		
+		EnemyInv[0] = EnemyPatrol;
+		EnemyInv[1] = EnemyPatrol2;
 	}
 	
 	// Update is called once per frame
@@ -25,6 +30,7 @@ public class EnemySpawn : MonoBehaviour {
 	public IEnumerator SpawnCo()
     {
          yield return new WaitForSeconds(5.0f);
-		 Instantiate (EnemyPatrol);
+		 int EnemyIndex = Random.Range (0, EnemyInv.Length);
+		 GameObject inst = (GameObject)Instantiate (EnemyInv[EnemyIndex]);
 	}
 }
