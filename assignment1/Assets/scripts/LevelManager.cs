@@ -16,6 +16,7 @@ using UnityEngine;
          public PlayerHealth PlayerHealth;
          public float Lives = 3;
          public Slider LivesBar;
+         public CharacterMove CharacterMove;
          // Particles
          public GameObject DeathParticle;
          public GameObject RespawnParticle;
@@ -36,6 +37,7 @@ using UnityEngine;
              PlayerCollider = Player.GetComponent<Collider2D>();
              print(playersRender);
              PlayerHealth = FindObjectOfType <PlayerHealth>();
+             CharacterMove = FindObjectOfType <CharacterMove>();
          }
 
          void Update () {
@@ -55,6 +57,8 @@ using UnityEngine;
              respawnIsRunning = true;
 
              Lives -= 1;
+
+             CharacterMove.enabled = false;
 
              //Hide Player
              playersRender.enabled = false;    
@@ -80,6 +84,7 @@ using UnityEngine;
              Player.transform.position = new Vector3 (CurrentCheckPoint.transform.position.x, CurrentCheckPoint.transform.position.y, CurrentCheckPoint.transform.position.z);
              playersRender.enabled = true;
              PlayerCollider.enabled = true;
+             CharacterMove.enabled = true;
              Debug.Log("Player Respawned");
              respawnIsRunning = false;
          }

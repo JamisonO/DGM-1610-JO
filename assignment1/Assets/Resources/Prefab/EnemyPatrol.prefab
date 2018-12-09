@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 114854351646746582}
   - component: {fileID: 114686653694637350}
   - component: {fileID: 114365943750575146}
+  - component: {fileID: 95295317199632960}
   m_Layer: 14
   m_Name: EnemyPatrol
   m_TagString: Enemy
@@ -174,6 +175,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.6539984, y: 5.4349966}
   m_EdgeRadius: 0
+--- !u!95 &95295317199632960
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1890670479770024}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 79769e511dfa84e8abd2b7078aa55f72, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114365943750575146
 MonoBehaviour:
   m_ObjectHideFlags: 1

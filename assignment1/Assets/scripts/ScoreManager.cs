@@ -32,7 +32,7 @@ public class ScoreManager : MonoBehaviour {
 	void Update () {
 		if(Score < 0)
 			Score = 0;
-		ScoreText.text = "Score: " + Score;		
+		ScoreText.text = "Score: " + Score + "/300";		
 
 		//If player wins, display win text
 		if(Score >= WinScore ){

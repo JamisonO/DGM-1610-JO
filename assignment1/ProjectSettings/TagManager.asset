@@ -9,6 +9,7 @@ TagManager:
   - DeathRock
   - Projectile
   - Invincible
+  - Ground
   layers:
   - Default
   - TransparentFX

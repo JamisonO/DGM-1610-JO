@@ -85,12 +85,14 @@ public class CharacterMove : MonoBehaviour {
 	}
 
     void OnCollisionEnter2D(Collision2D other) {
+	animator.SetBool("IsJumping", false);
     if (other.gameObject.tag == "DeathRock"){
         	LevelManager.RespawnPlayer();
 		}
-    }
- 
+	}
 
+    
+ 
 	//couroutine for SpeedPickup
 
 	public void SpeedUp()
