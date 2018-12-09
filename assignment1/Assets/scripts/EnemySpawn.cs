@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour {
-
 	
 	public GameObject EnemyPatrol; 
 	public GameObject EnemyPatrol2;

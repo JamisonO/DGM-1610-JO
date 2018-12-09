@@ -7,6 +7,7 @@ public class CharacterMove : MonoBehaviour {
 	public int MoveSpeed;
 	public float JumpHeight;
 	private bool Doublejump;
+	public LevelManager LevelManager;
 
 	// Player grounded variables
 	public Transform GroundCheck;
@@ -17,7 +18,7 @@ public class CharacterMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		LevelManager = FindObjectOfType <LevelManager>();
 	}
 	
 	void FixedUpdate () {
@@ -82,6 +83,13 @@ public class CharacterMove : MonoBehaviour {
 		//animator.SetBool("IsJumping", true);
 	}
 
+    void OnCollisionEnter2D(Collision2D other) {
+    if (other.gameObject.tag == "DeathRock"){
+        	LevelManager.RespawnPlayer();
+		}
+    }
+ 
+
 	//couroutine for SpeedPickup
 
 	public void SpeedUp()
@@ -91,11 +99,11 @@ public class CharacterMove : MonoBehaviour {
 
 	public IEnumerator SpeedUpCo()
     {
-		 MoveSpeed = 12;
-		 JumpHeight = 10;
+		 MoveSpeed = 17;
+		 JumpHeight = 25;
          yield return new WaitForSeconds(10.0f);
-         MoveSpeed = 5;
-		 JumpHeight = 5;
+         MoveSpeed = 10;
+		 JumpHeight = 15;
 	}
 		
 }

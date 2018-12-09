@@ -20,6 +20,7 @@ public class EnemyHealth : MonoBehaviour {
 			Instantiate(EnemyDeathParticle, transform.position, transform.rotation);
 			Destroy (gameObject);
 			EnemySpawn.Spawn();
+			Debug.Log ("Spawn Activated");
 		}
 	}
 

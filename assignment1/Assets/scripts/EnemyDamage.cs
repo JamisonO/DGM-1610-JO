@@ -14,6 +14,7 @@ public class EnemyDamage : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
+		Debug.Log("Hit");
 			if(other.name == "Player") {
 				PlayerHealth.Health -= Damage;
 			}
