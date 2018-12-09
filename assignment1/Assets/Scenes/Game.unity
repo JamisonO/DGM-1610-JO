@@ -21253,7 +21253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bar: {fileID: 197761115}
-  Ammo: 1000
+  Ammo: 20
   FirePoint: {fileID: 1081637369}
   Projectile: {fileID: 1908537745187990, guid: 662339820d5714265a22f8c4a42ddf05, type: 2}
 --- !u!114 &1788986679
