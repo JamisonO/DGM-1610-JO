@@ -49,7 +49,7 @@ public class ScoreManager : MonoBehaviour {
 
 		// If player hits the Escape key return to start menu
 		if(Input.GetKeyDown(KeyCode.Escape)){
-			SceneManager.LoadScene(0);
+			SceneManager.LoadScene("Game Menu");
 		}
 
 	}
