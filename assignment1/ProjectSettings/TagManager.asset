@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Environment Object
+  - DeathRock
+  - Projectile
+  - Invincible
   layers:
   - Default
   - TransparentFX
@@ -24,8 +28,8 @@ TagManager:
   - Player
   - Firepoint
   - Pickup
-  - 
-  - 
+  - Interactibles
+  - EnemyStop
   - 
   - 
   - 

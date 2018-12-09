@@ -8,6 +8,7 @@ public class CharacterMove : MonoBehaviour {
 	public float JumpHeight;
 	private bool Doublejump;
 	public LevelManager LevelManager;
+	public Animator animator;
 
 	// Player grounded variables
 	public Transform GroundCheck;
@@ -53,19 +54,19 @@ public class CharacterMove : MonoBehaviour {
 		if(Input.GetKey (KeyCode.D)){
 			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 			MoveVelocity =  MoveSpeed;
-			//animator.SetBool("isWalking", true);
+			animator.SetBool("isWalking", true);
 		}
 		else if(Input.GetKeyUp(KeyCode.D)){
-			//animator.SetBool("isWalking", false);
+			animator.SetBool("isWalking", false);
 		}
 
 		if(Input.GetKey (KeyCode.A)){
 			GetComponent<Rigidbody2D>().velocity = new Vector2( -MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 			MoveVelocity = -MoveSpeed;
-			//animator.SetBool("isWalking", true);
+			animator.SetBool("isWalking", true);
 		}
 		else if(Input.GetKeyUp(KeyCode.A)){
-			//animator.SetBool("isWalking", false);
+			animator.SetBool("isWalking", false);
 		}
 
 		GetComponent<Rigidbody2D>().velocity = new Vector2( MoveVelocity, GetComponent<Rigidbody2D>().velocity.y);
@@ -80,7 +81,7 @@ public class CharacterMove : MonoBehaviour {
 	}
 	public void Jump(){
 		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
-		//animator.SetBool("IsJumping", true);
+		animator.SetBool("IsJumping", true);
 	}
 
     void OnCollisionEnter2D(Collision2D other) {
@@ -105,5 +106,4 @@ public class CharacterMove : MonoBehaviour {
          MoveSpeed = 10;
 		 JumpHeight = 15;
 	}
-		
 }

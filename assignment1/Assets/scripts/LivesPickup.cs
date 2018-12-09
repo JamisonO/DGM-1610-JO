@@ -12,12 +12,13 @@ public class LivesPickup : MonoBehaviour {
 		LevelManager = FindObjectOfType <LevelManager>();
 	}
 
-	void OnTriggerEnter2D (Collider2D Other){
-		if  (Other.GetComponent<Rigidbody2D> () == null)
-			return;
+	void OnTriggerEnter2D (Collider2D other){
+		if(other.name == "Player"){
 
 		LevelManager.AddLife (LifetoAdd);
 
 		Destroy (gameObject);
+		}
 	}
+
 }

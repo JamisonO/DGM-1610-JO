@@ -12,12 +12,12 @@ public class HealthPickup : MonoBehaviour {
 		PlayerHealth = FindObjectOfType <PlayerHealth>();
 	}
 
-	void OnTriggerEnter2D (Collider2D Other){
-		if  (Other.GetComponent<Rigidbody2D> () == null)
-			return;
+	void OnTriggerEnter2D (Collider2D other){
+		if(other.name == "Player"){
 
 		PlayerHealth.AddHP (HPtoAdd);
 
 		Destroy (gameObject);
+		}
 	}
 }

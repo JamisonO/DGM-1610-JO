@@ -8,7 +8,7 @@ public class EnemySpawn : MonoBehaviour {
 	public GameObject EnemyPatrol2;
 	public GameObject SpawnPoint; 
 
-	GameObject[] EnemyInv = new GameObject[2];         
+	private GameObject[] EnemyInv = new GameObject[2];         
 
 	// Use this for initialization
 	void Start () {
@@ -31,5 +31,6 @@ public class EnemySpawn : MonoBehaviour {
          yield return new WaitForSeconds(5.0f);
 		 int EnemyIndex = Random.Range (0, EnemyInv.Length);
 		 GameObject inst = (GameObject)Instantiate (EnemyInv[EnemyIndex]);
+		 Debug.Log("SpawnSuccessful");
 	}
 }

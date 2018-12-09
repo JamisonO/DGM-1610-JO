@@ -25,11 +25,7 @@ public class projectile : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if(other.tag == "Enemy"){
-			EnemyHealth.Health -= Damage;
-			Instantiate(ProjectileParticle, other.transform.position, other.transform.rotation);
-		}
-	
+		Instantiate(ProjectileParticle, transform.position, transform.rotation);
 		Destroy (gameObject);
 	}
 	

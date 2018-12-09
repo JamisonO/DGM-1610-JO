@@ -11,13 +11,13 @@ public class SpeedPickup : MonoBehaviour {
 		CharacterMove = FindObjectOfType <CharacterMove>();
 	}
 
-	void OnTriggerEnter2D (Collider2D Other){
-		if  (Other.GetComponent<Rigidbody2D> () == null)
-			return;
+	void OnTriggerEnter2D (Collider2D other){
+		if(other.name == "Player"){
 
 		CharacterMove.SpeedUp();
 
 		Destroy (gameObject);
+		}
 	}
 	
 	// Update is called once per frame
